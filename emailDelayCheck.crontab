@@ -1,0 +1,2 @@
+00 * * * *   root    if [ -x /home/monitor/bin/sendEmailCheckDelay.pl ]; then env LANG=C /home/monitor/bin/sendEmailCheckDelay.pl 2>&1 >> /dev/null ; fi 2>&1 > /dev/null
+

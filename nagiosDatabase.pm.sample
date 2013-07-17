@@ -1,0 +1,22 @@
+# nagiosDatabase.pm - database connection details for the perl scrips and nagios
+
+package Nagios::Database;
+use warnings;
+use strict;
+use Exporter;
+
+our $VERSION = '1.00';
+
+our @ISR=qw/ Exporter /;
+our @EXPORT_OK = qw/dsn/;
+
+sub dsn {
+	my $nagiosStatesDb = "DATABASE:SERVER";
+	my $nagiosStatesUser = "USER";
+	my $nagiosStatesPass = "PASSWORD";
+
+	my @dsn =( "DBI:mysql:$nagiosStatesDb", $nagiosStatesUser, $nagiosStatesPass );
+	return @dsn;
+}
+
+1;
